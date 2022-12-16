@@ -36,7 +36,12 @@ public class DispatcherServlet  extends HttpServlet {
 
         Controller controller = handlerMapping.getController(path);
 
-        String viewName = controller.handleRequest(req, resp);
+        String viewName = null;
+        try {
+            viewName = controller.execute(req, resp);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
         String view = null;
         if (!viewName.contains(".do")) {
