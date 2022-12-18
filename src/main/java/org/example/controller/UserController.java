@@ -7,8 +7,8 @@ import org.example.Controller;
 public class UserController implements Controller {
 
     @Override
-    public String execute(HttpServletRequest req, HttpServletResponse res) {
+    public String execute(HttpServletRequest req, HttpServletResponse res
+    ) throws Exception {
         return null;
     }
-
 }
