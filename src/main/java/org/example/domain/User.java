@@ -1,6 +1,8 @@
 package org.example.domain;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
 
     private final long id;
     private final String username;
